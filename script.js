@@ -68,7 +68,7 @@ function checkSavings() {
 }
 
 checkSavings();
-
+alert("lol")
 
 
 
