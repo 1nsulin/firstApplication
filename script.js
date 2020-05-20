@@ -75,12 +75,32 @@ let appData = {
         }
     },
     chooseIncome: function(){
+        for(let i = 0; i<1; i++){
         let a = prompt("Перечислите статьи дохода (через запятую)", "");
-        appData.income = a.split(", ");
-        appData.income.push( prompt("Может что-то еще?", '') );
-        appData.income.sort();
+            if (a != "" && a != null){
+                appData.income = a.split(", ");
+                appData.income.push( prompt("Может что-то еще?", '') );
+                appData.income.sort();
+            } else {
+                i--;
+            };
+        };
+
     },
 };
+
+// appData.chooseIncome();
+// appData.income.forEach(function(item, index){
+//     let modIndex = index + 1;
+//     alert("Способы доп. заработка: " + modIndex + ": " + item);
+// });
+
+for(let k in appData){
+    console.log("Наша программа содержит " + appData.k + " : " + appData[k]);
+};
+
+// РЕШИТЬ ЗАДАНИЕ 5.3, 5.4 
+
 
 
 
